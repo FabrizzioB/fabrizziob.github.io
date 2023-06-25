@@ -4,19 +4,32 @@
     src: url(../css/fonts/Roboto/Roboto-Regular.ttf);
 }
 
-
 *{
     font-family:  Roboto-Regular;
-}
-
-body{
     background-image: url(../img/pexels-neo-2653362.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    color: rgb(180, 180, 180);
+    
+}
+
+body{
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    color: rgb(180, 180, 180);
+}
+
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 article {
@@ -35,3 +48,25 @@ footer{
     display: flex;
     flex-direction: column;
 }
+
+/* SOCIALS */
+.socials{
+    margin-left: -2%;
+    
+}
+
+.socials a:link{
+    color: blue;
+}
+
+.socials a:hover {
+    color: white;
+  }
+
+a:link{
+    color: blue;
+}
+ 
+a:hover {
+    color: white;
+  }
