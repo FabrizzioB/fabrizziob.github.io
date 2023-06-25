@@ -13,9 +13,9 @@ body{
     background-image: url(../img/pexels-neo-2653362.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     color: rgb(180, 180, 180);
-    
-    display: flex;
     flex-direction: column;
 }
 
