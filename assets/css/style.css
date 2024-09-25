@@ -1,0 +1,153 @@
+@font-face {
+    font-family: Roboto-Regular;
+    font-style: normal;
+    src: url(../css/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+*{
+    font-family:  Roboto-Regular;
+    background-image: url(../img/pexels-neo-2653362.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+body{
+
+    /* Apply a smooth gradient background */
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
+
+    /* Make the background cover the entire page */
+    min-height: 100vh;
+    
+    /* Make sure the background applies smoothly */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white; /* Make text stand out */
+
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    color: rgb(180, 180, 180);*/
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+article {
+    margin: auto 0;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    display: inline;
+  }
+
+footer{
+    text-align: center;
+    margin-top: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: #1e3c72; /* Deep blue matching your background */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu styles */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #a3c4f3; /* Light blue for links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #2a5298; /* Slightly lighter blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Header styles (right of the menu) */
+.header-right {
+    text-align: right;
+}
+
+.header-right h1 {
+    margin: 0;
+    font-size: 22px;
+    color: white;
+}
+
+/* Social links styling */
+.socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.socials li {
+    list-style-type: none;
+}
+
+.socials a {
+    color: #a3c4f3; /* Light blue for social links */
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: white; /* White on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-right {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .menu {
+        text-align: center;
+    }
+}
