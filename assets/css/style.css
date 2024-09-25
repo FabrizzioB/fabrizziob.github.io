@@ -9,8 +9,8 @@
     --text-color: #4f4f4f; /* Dark Gray Sumi */
     --navbar-background: #f3f2e7; /* Off-White Shironeri */
     --link-color: #a63d40; /* Deep Red */  
-    --link-hover-color: #e5b8c2; /* Pale Rose */
-    --social-link-color: #b4e4db; /* Soft Pastel Green */
+    --link-hover-color: #e5b8c2; /* Pale Rose e5b8c2*/
+    --social-link-color: #a63d40; /* Soft Pastel Green b4e4db */
 }
 
 body {
@@ -29,6 +29,16 @@ body.dark-mode {
     --background-color: #1c1c1c; /* Dark mode background */
     --text-color: #d0d0d0; /* Dark mode text color */
     --link-color: #b4e4db;
+}
+
+p a{
+    color: #4f4f4f;
+
+}
+
+p a:hover{
+    color: #d0d0d0;
+    
 }
 
 /* Navbar styles */
@@ -157,20 +167,24 @@ article {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
-        padding: 10px;
+        padding: 5px 0; /* Further reduce padding for mobile */
+        flex-direction: column; /* Stack items vertically if needed */
+        max-height: 50px; /* Further reduce max height */
     }
 
     .menu li {
-        margin: 10px 0; /* Increase space between items */
+        display: block; /* Stack menu items */
+        margin: 5px 0; /* Space out items */
     }
 
-    .header-right {
-        text-align: center;
-        margin-top: 10px;
+
+    .header-right h1 {
+        font-size: 16px; /* Adjust font size */
     }
 
-    .menu {
-        text-align: center;
+    /* Ensure the menu text doesn't overflow */
+    .menu li a {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 5px 10px; /* Smaller padding */
     }
 }
