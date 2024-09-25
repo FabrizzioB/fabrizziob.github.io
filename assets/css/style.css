@@ -4,68 +4,37 @@
     src: url(../css/fonts/Roboto/Roboto-Regular.ttf);
 }
 
-*{
-    font-family:  Roboto-Regular;
-    background-image: url(../img/pexels-neo-2653362.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    
+:root {
+    --background-color: #f3f2e7; /* Off-White Shironeri */
+    --text-color: #4f4f4f; /* Dark Gray Sumi */
+    --navbar-background: #f3f2e7; /* Off-White Shironeri */
+    --link-color: #a63d40; /* Deep Red */  
+    --link-hover-color: #e5b8c2; /* Pale Rose */
+    --social-link-color: #b4e4db; /* Soft Pastel Green */
 }
 
-body{
-
-    /* Apply a smooth gradient background */
-    background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
-
-    /* Make the background cover the entire page */
-    min-height: 100vh;
-    
-    /* Make sure the background applies smoothly */
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+    /* Use the background and text colors from variables */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    color: white; /* Make text stand out */
-
-    /*display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex;
-    align-self: stretch;
-    justify-content: space-between;
-    color: rgb(180, 180, 180);*/
+    min-height: 100vh;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
-article {
-    margin: auto 0;
-}
-
-li {
-    list-style-type: none;
-    float: left;
-    display: inline;
-  }
-
-footer{
-    text-align: center;
-    margin-top: 35%;
-    display: flex;
-    flex-direction: column;
+body.dark-mode {
+    --navbar-background: #4f4f4f;
+    --background-color: #1c1c1c; /* Dark mode background */
+    --text-color: #d0d0d0; /* Dark mode text color */
+    --link-color: #b4e4db;
 }
 
 /* Navbar styles */
 .navbar {
     width: 100%;
-    background-color: #1e3c72; /* Deep blue matching your background */
+    background-color: var(--navbar-background);
     padding: 20px 0;
     position: fixed;
     top: 0;
@@ -90,7 +59,7 @@ footer{
 }
 
 .menu li a {
-    color: #a3c4f3; /* Light blue for links */
+    color: var(--link-color); /* Pale Rose */
     text-decoration: none;
     font-size: 18px;
     padding: 10px 20px;
@@ -99,8 +68,8 @@ footer{
 }
 
 .menu li a:hover {
-    background-color: #2a5298; /* Slightly lighter blue background on hover */
-    color: #ffffff; /* White text on hover */
+    background-color: var(--link-hover-color); /* Deep Red on hover */
+    color: white; /* White text on hover */
 }
 
 /* Header styles (right of the menu) */
@@ -111,7 +80,7 @@ footer{
 .header-right h1 {
     margin: 0;
     font-size: 22px;
-    color: white;
+    color: var(--text-color); /* Use text color */
 }
 
 /* Social links styling */
@@ -127,12 +96,45 @@ footer{
 }
 
 .socials a {
-    color: #a3c4f3; /* Light blue for social links */
+    color: var(--social-link-color); /* Soft Pastel Green */
     transition: color 0.3s ease;
 }
 
 .socials a:hover {
     color: white; /* White on hover */
+}
+
+/* Footer styles */
+footer {
+    width: 100%;
+    background-color: var(--navbar-background); /* Off-White Shironeri, same as navbar */
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Similar shadow as the navbar */
+    color: var(--text-color); /* Text color */
+    text-align: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+    float: left;
+    display: inline;
+}
+
+article {
+    margin: auto 0;
 }
 
 /* Responsive design for smaller screens */
