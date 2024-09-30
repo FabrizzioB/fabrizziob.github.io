@@ -1,7 +1,7 @@
 @font-face {
     font-family: Roboto-Regular;
     font-style: normal;
-    src: url(../css/fonts/Roboto/Roboto-Regular.ttf);
+    src: url(../css/fonts/Roboto/Roboto-Medium.ttf);
 }
 
 :root {
@@ -14,7 +14,6 @@
 }
 
 body {
-    /* Use the background and text colors from variables */
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
@@ -171,10 +170,7 @@ article {
     .menu {
         text-align: center;
     }
-}
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack elements vertically */
         align-items: flex-start; /* Align items to the start */
@@ -192,6 +188,11 @@ article {
         width: 100%; /* Ensure socials take up the full width */
         padding-left: 10px; /* Add padding */
         margin-top: 5px;
+        gap: 5px; /* Reduce the gap between social icons */
+    }
+
+    .socials a {
+        font-size: 12px; /* Reduce the size of social links */
     }
 
     .navbar {
@@ -204,7 +205,6 @@ article {
         display: block; /* Stack menu items */
         margin: 5px 0; /* Space out items */
     }
-
 
     .header-right h1 {
         font-size: 16px; /* Adjust font size */
@@ -219,5 +219,33 @@ article {
     footer {
         padding: 5px 0; /* Further reduce padding for mobile */
         font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
+/* For very small screens (like iPhone sizes) */
+@media (max-width: 480px) {
+    .socials li:nth-child(n+4) {
+        display: none; /* Hide icons beyond the third one only on very small screens */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #theme-toggle {
+        padding: 4px 5px; /* Slightly smaller padding */
+        font-size: 14px;    /* Slightly smaller font size */
+        width: 100%;        /* Full-width button for small devices */
+        max-width: 200px;   /* Set a maximum width for the button */
+        margin: 10px auto;  /* Center the button */
+    }
+}
+
+@media (max-width: 480px) {
+    #theme-toggle {
+        padding: 6px 10px; /* Even smaller padding for very small screens */
+        font-size: 12px;    /* Smaller font size for mobile */
+        width: 100%;        /* Full-width button for small devices */
+        max-width: 200px;   /* Set a maximum width for the button */
+        margin: 10px auto;  /* Center the button */
     }
 }
